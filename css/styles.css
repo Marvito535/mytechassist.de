@@ -1,0 +1,243 @@
+/* Allgemeine Styles */
+body {
+    font-family: Arial, sans-serif; /* Setzt die Schriftart auf Arial oder sans-serif als Fallback */
+    height:100%;
+    margin: 0; /* Entfernt standardmäßige Ränder des Browsers */
+    padding: 0; /* Entfernt standardmäßige Auffüllung des Browsers */
+    background-color: #3670a3; /* Setzt den Hintergrund des gesamten Dokuments auf eine blaue Farbe */
+    display: flex;
+    flex-direction: column; /* Stellt sicher, dass der Footer am unteren Ende ist */
+}
+
+/* Header */
+header {
+    position: relative; /* Ermöglicht es, dass das Logo relativ zum Header positioniert wird */
+    display: flex; /* Verwendet Flexbox, um die Elemente im Header zu organisieren */
+    justify-content: center; /* Zentriert den Text horizontal im Header */
+    align-items: center; /* Zentriert den Text vertikal im Header */
+    color: white; /* Setzt die Textfarbe auf weiß */
+    text-align: center; /* Zentriert den Text innerhalb des Containers */
+    padding: 10px 20px; /* Fügt dem Header etwas Innenabstand hinzu (10px oben und unten, 20px links und rechts) */
+}
+
+.contact-info {
+    position: absolute;
+    left: 50px;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0; /* Entfernt den Standard-Margin des h1-Elements */
+    font-size: 2.5rem; /* Setzt die Schriftgröße des Titels auf 2.5rem */
+}
+
+.logo {
+    position: absolute; /* Setzt das Logo absolut innerhalb des Headers */
+    right: 50px; /* Positioniert das Logo 50px vom rechten Rand des Headers entfernt */
+    top: 50%; /* Positioniert das Logo vertikal in der Mitte des Headers */
+    transform: translateY(-50%); /* Korrigiert die vertikale Position, um das Logo genau zu zentrieren */
+    height: 115px; /* Setzt die Höhe des Logos auf 115px */
+    transition: transform 0.3s ease; /* Für flüssige Übergänge */
+}
+    .speech-bubble {
+        position: absolute;
+        background: white;
+        color: #333;
+        padding: 10px 10px;
+        right: 170px;
+        border-radius: 10px;
+        max-width: 200px;
+        font-size: 16px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Der "Pfeil" der Sprechblase */
+      .speech-bubble::after {
+        content: "";
+        position: absolute;
+        top: 50%;  /* Mittig zur Blase */
+        right: -10px;  /* Position rechts außerhalb der Blase */
+        transform: translateY(-50%); /* Exakte vertikale Zentrierung */
+        
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid #ffcc00; /* Linke Grenze = gefärbter Pfeil */
+      }
+
+
+/* Text Container */
+.text {
+    display: flex; /* Verwendet Flexbox, um die Text-Inhalte zu organisieren */
+    flex-direction: column; /* Ordnet die Textinhalte in einer vertikalen Richtung an */
+    align-items: center; /* Zentriert die Textinhalte horizontal */
+    justify-content: center; /* Zentriert die Textinhalte vertikal */
+    text-align: center; /* Zentriert den Text innerhalb des Containers */
+    width: 100%; /* Der Textcontainer nimmt die gesamte verfügbare Breite ein */
+}
+
+/* Hover-Effekt für Bilder */
+img:hover {
+    /* Startet die Schüttel-Animation, wenn das Bild angefahren wird */
+    animation: shake 0.5s; /* Setzt die Animation auf eine Dauer von 0.5 Sekunden */
+    animation-iteration-count: infinite; /* Wiederholt die Animation unendlich oft */
+}
+
+/* Definiert die Schüttel-Animation */
+@keyframes shake {
+    0% { 
+        transform: translateY(-50%) translate(1px, 1px) rotate(0deg); /* Anfangszustand */
+    }
+    10% { 
+        transform: translateY(-50%) translate(-1px, -2px) rotate(-1deg); /* Schütteln */
+    }
+    20% { 
+        transform: translateY(-50%) translate(-3px, 0px) rotate(1deg); /* Schütteln */
+    }
+    30% { 
+        transform: translateY(-50%) translate(3px, 2px) rotate(0deg); /* Schütteln */
+    }
+    40% { 
+        transform: translateY(-50%) translate(1px, -1px) rotate(1deg); /* Schütteln */
+    }
+    50% { 
+        transform: translateY(-50%) translate(-1px, 2px) rotate(-1deg); /* Schütteln */
+    }
+    60% { 
+        transform: translateY(-50%) translate(-3px, 1px) rotate(0deg); /* Schütteln */
+    }
+    70% { 
+        transform: translateY(-50%) translate(3px, 1px) rotate(-1deg); /* Schütteln */
+    }
+    80% { 
+        transform: translateY(-50%) translate(-1px, -1px) rotate(1deg); /* Schütteln */
+    }
+    90% { 
+        transform: translateY(-50%) translate(1px, 2px) rotate(0deg); /* Schütteln */
+    }
+    100% { 
+        transform: translateY(-50%) translate(1px, -2px) rotate(-1deg); /* Endzustand */
+    }
+}
+
+/* Navigation */
+nav {
+    display: flex; /* Verwendet Flexbox für die Navigation */
+    justify-content: center; /* Zentriert die Navigationslinks horizontal */
+    background-color: #efbf37; /* Setzt den Hintergrund der Navigation auf Gelb */
+}
+
+nav a {
+    color: white; /* Setzt die Textfarbe der Links auf weiß */
+    padding: 14px 20px; /* Fügt den Links Innenabstände hinzu (14px oben und unten, 20px links und rechts) */
+    text-decoration: none; /* Entfernt die Unterstreichung von Links */
+    text-align: center; /* Zentriert den Text innerhalb des Links */
+}
+
+nav a:hover {
+    background-color: #575757; /* Setzt den Hintergrund auf Grau, wenn der Benutzer mit der Maus über den Link fährt */
+}
+
+/* Main Content */
+.main-content {
+    display: flex; /* Verwendet Flexbox für die Hauptinhalte */
+    margin: 40px; /* Fügt der Hauptsektion Innenabstände hinzu */ 
+    align-items: center; /* Zentriert den Inhalt vertikal */
+}
+
+/* Retro Monitor */
+.retro-monitor {
+    flex: 1;
+    margin: 20px;
+    padding:10px;
+    height: 160px;
+    background-color: white; /* Setzt den Hintergrund der Retro-Monitore auf weiß */
+    border: 10px solid #efbf37; /* Fügt einen gelben Rand hinzu */
+    border-radius: 15px; /* Abgerundete Ecken für die Retro-Monitore */
+    box-shadow: 0 4px 15px rgba(0, 0, 102, 0.4); /* Fügt einen Schatteneffekt hinzu */
+    font-family: 'Courier New', Courier, monospace; /* Setzt die Schriftart auf 'Courier New' für Retro-Optik */
+}
+
+/* Headline */
+.retro-monitor h2 {
+    font-size: 1.5rem; /* Setzt die Schriftgröße der Überschrift */
+    color: #333; /* Setzt die Textfarbe auf Dunkelgrau */
+}
+
+.retro-monitor p {
+    color: #666; /* Setzt die Textfarbe für Absätze auf helleres Grau */
+    line-height: 1.5; /* Setzt den Zeilenabstand auf 1.5 */
+}
+
+.content {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #efbf37;
+    display: block;
+    text-align: justify; /* Text wird blockweise verteilt */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace; /* Setzt die Schriftart auf 'Courier New' für Retro-Optik */
+    opacity: 0.8; /* Setzt die Transparenz auf 50% */
+}
+
+/* Footer */
+footer {
+    background-color:#efbf37; /* Setzt den Hintergrund des Footers auf Gelb */
+    color: white; /* Setzt die Textfarbe im Footer auf Weiß */
+    text-align: center; /* Zentriert den Text im Footer */
+    padding: 10px 0; /* Fügt dem Footer Innenabstände hinzu */
+    /*position: fixed; /* Macht den Footer fest, damit er immer unten bleibt */
+    width: 100%; /* Stellt sicher, dass der Footer die gesamte Breite nutzt */
+    bottom: 0; /* Positioniert den Footer am unteren Rand des Bildschirms */
+    margin-top: 50px; /* Fügt Abstand zum letzten Inhaltselement hinzu */
+}
+
+/* Responsiveness */
+@media (max-width: 1300px) {
+    header {
+        flex-direction: column; /* Stellt sicher, dass der Header auf kleinen Bildschirmen vertikal ausgerichtet wird */
+        text-align: center; /* Setzt den Text im Header auf zentriert */
+    }
+
+    .logo {
+        position: static; /* Stellt sicher, dass das Logo auf kleineren Bildschirmen nicht mehr absolut positioniert ist */
+        margin-top: 20px; /* Fügt oben einen Abstand zum Logo hinzu */
+        height: 80px; /* Reduziert die Höhe des Logos */
+    }
+
+    .speech-bubble {
+        position: static; /* Stellt sicher, dass das Logo auf kleineren Bildschirmen nicht mehr absolut positioniert ist */
+        margin-bottom: 20px; /* Fügt oben einen Abstand zum Logo hinzu */
+        height: 20px; /* Reduziert die Höhe des Logos */
+        font-size: 12px;
+    }
+
+    nav {
+        flex-direction: column; /* Ordnet die Navigationselemente vertikal an */
+    }
+
+    nav a {
+        padding: 10px; /* Fügt den Links kleinere Innenabstände hinzu */
+        width: 100px; /* Setzt eine feste Breite für die Links */
+        text-align: center; /* Zentriert den Text innerhalb der Links */
+    }
+
+    .main-content {
+        flex-direction: row; /* Stellt sicher, dass die Retro-Monitore nebeneinander angezeigt werden */
+        justify-content: center; /* Zentriert die Retro-Monitore horizontal */
+        flex-wrap: wrap; /* Wenn nötig, wird der Inhalt umgebrochen */
+    }
+
+    .retro-monitor {
+        width: 200px; /* Setzt eine feste Breite für die Retro-Monitore */
+    }
+
+    .footer {
+        position: static; /* Stellt sicher, dass der Footer nicht fixiert wird, sondern am Ende der Seite erscheint */
+    }
+
+}
+
