@@ -4,7 +4,7 @@ body {
     height:100%;
     margin: 0; /* Entfernt standardmäßige Ränder des Browsers */
     padding: 0; /* Entfernt standardmäßige Auffüllung des Browsers */
-    background-color: #3670a3; /* Setzt den Hintergrund des gesamten Dokuments auf eine blaue Farbe */
+    background-color: #A9A9A9 ; /* Setzt den Hintergrund des gesamten Dokuments auf eine blaue Farbe */
     display: flex;
     flex-direction: column; /* Stellt sicher, dass der Footer am unteren Ende ist */
 }
@@ -15,7 +15,7 @@ header {
     display: flex; /* Verwendet Flexbox, um die Elemente im Header zu organisieren */
     justify-content: center; /* Zentriert den Text horizontal im Header */
     align-items: center; /* Zentriert den Text vertikal im Header */
-    color: white; /* Setzt die Textfarbe auf weiß */
+    color: #EAEAEA; /* Setzt die Textfarbe auf weiß */
     text-align: center; /* Zentriert den Text innerhalb des Containers */
     padding: 10px 20px; /* Fügt dem Header etwas Innenabstand hinzu (10px oben und unten, 20px links und rechts) */
 }
@@ -41,8 +41,8 @@ header h1 {
 }
     .speech-bubble {
         position: absolute;
-        background: white;
-        color: #333;
+        background:  #585858;
+        color: #EAEAEA;
         padding: 10px 10px;
         right: 170px;
         border-radius: 10px;
@@ -63,7 +63,7 @@ header h1 {
         height: 0;
         border-top: 10px solid transparent;
         border-bottom: 10px solid transparent;
-        border-left: 10px solid #ffcc00; /* Linke Grenze = gefärbter Pfeil */
+        border-left: 10px solid #A52A2A; /* Linke Grenze = gefärbter Pfeil */
       }
 
 
@@ -125,68 +125,110 @@ img:hover {
 nav {
     display: flex; /* Verwendet Flexbox für die Navigation */
     justify-content: center; /* Zentriert die Navigationslinks horizontal */
-    background-color: #efbf37; /* Setzt den Hintergrund der Navigation auf Gelb */
+    background-color: #A52A2A; /* Setzt den Hintergrund der Navigation auf Gelb */
+    margin-bottom: 20px;
 }
 
 nav a {
-    color: white; /* Setzt die Textfarbe der Links auf weiß */
+    color: #EAEAEA; /* Setzt die Textfarbe der Links auf weiß */
     padding: 14px 20px; /* Fügt den Links Innenabstände hinzu (14px oben und unten, 20px links und rechts) */
     text-decoration: none; /* Entfernt die Unterstreichung von Links */
     text-align: center; /* Zentriert den Text innerhalb des Links */
 }
 
 nav a:hover {
-    background-color: #575757; /* Setzt den Hintergrund auf Grau, wenn der Benutzer mit der Maus über den Link fährt */
+    background-color: #FF914D; /* Setzt den Hintergrund auf Grau, wenn der Benutzer mit der Maus über den Link fährt */
 }
+
+.großer-absatz {
+    margin-bottom: 50px;
+  }
+  .kleiner-absatz {
+    margin-bottom: 30px;
+  }
 
 /* Main Content */
 .main-content {
     display: flex; /* Verwendet Flexbox für die Hauptinhalte */
-    margin: 40px; /* Fügt der Hauptsektion Innenabstände hinzu */ 
-    align-items: center; /* Zentriert den Inhalt vertikal */
+    align-items: space-between; 
+    flex-wrap: wrap;
+    width: 100%; /* Setzt die Breite auf 100% des Elternelements */
+    margin: 0 auto;
 }
+  
 
 /* Retro Monitor */
 .retro-monitor {
-    flex: 1;
-    margin: 20px;
+    flex: 1 1;
+    margin: 10px;
     padding:10px;
-    height: 160px;
-    background-color: white; /* Setzt den Hintergrund der Retro-Monitore auf weiß */
-    border: 10px solid #efbf37; /* Fügt einen gelben Rand hinzu */
+    min-height: 140px;
+    height: auto; /* Passt sich automatisch an den Inhalt an */
+    background-color:  #585858; /* Setzt den Hintergrund der Retro-Monitore auf weiß */
+    border: 8px solid #A52A2A; /* Fügt einen gelben Rand hinzu */
     border-radius: 15px; /* Abgerundete Ecken für die Retro-Monitore */
-    box-shadow: 0 4px 15px rgba(0, 0, 102, 0.4); /* Fügt einen Schatteneffekt hinzu */
+    box-shadow: 0 10px 15px #87AFC7; /* Fügt einen Schatteneffekt hinzu */
     font-family: 'Courier New', Courier, monospace; /* Setzt die Schriftart auf 'Courier New' für Retro-Optik */
 }
 
 /* Headline */
-.retro-monitor h2 {
-    font-size: 1.5rem; /* Setzt die Schriftgröße der Überschrift */
-    color: #333; /* Setzt die Textfarbe auf Dunkelgrau */
+
+.retro-monitor h3,
+.retro-monitor h2,
+.retro-monitor ul,
+.retro-monitor p {
+    font-size: 1rem; /* Setzt die Schriftgröße */
+    color: #EAEAEA; /* Setzt die Textfarbe */
 }
 
-.retro-monitor p {
-    color: #666; /* Setzt die Textfarbe für Absätze auf helleres Grau */
-    line-height: 1.5; /* Setzt den Zeilenabstand auf 1.5 */
+.callToAction h2,
+.callToAction p
+{
+    color: #EAEAEA;
+    text-align: center;
+    margin: 40px;
+}
+
+table {
+    width: 80%;
+    color: #EAEAEA;
+    background-color:  #585858; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border: 8px solid #A52A2A; /* Fügt einen gelben Rand hinzu */
+    border-radius: 15px; /* Abgerundete Ecken */
+    box-shadow: 0 10px 15px #87AFC7; /* Fügt einen Schatteneffekt hinzu */
+    border-spacing: 0; /* Verhindert einen Abstand zwischen den Zellen */
+    font-family: 'Courier New', Courier, monospace; /* Setzt die Schriftart auf 'Courier New' für Retro-Optik */
+}
+th, td {
+    border: 1px solid #A52A2A;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color:  #585858; /* Kopfzeilen etwas dunkler */
 }
 
 .content {
     max-width: 1000px;
     margin: 20px auto;
-    background-color: #efbf37;
+    color: #EAEAEA;
+    background-color: #A52A2A;
     display: block;
     text-align: justify; /* Text wird blockweise verteilt */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 8px #87AFC7;
     font-family: 'Courier New', Courier, monospace; /* Setzt die Schriftart auf 'Courier New' für Retro-Optik */
     opacity: 0.8; /* Setzt die Transparenz auf 50% */
 }
 
 /* Footer */
 footer {
-    background-color:#efbf37; /* Setzt den Hintergrund des Footers auf Gelb */
-    color: white; /* Setzt die Textfarbe im Footer auf Weiß */
+    background-color:#A52A2A; /* Setzt den Hintergrund des Footers auf Gelb */
+    color: #EAEAEA; /* Setzt die Textfarbe im Footer auf Weiß */
     text-align: center; /* Zentriert den Text im Footer */
     padding: 10px 0; /* Fügt dem Footer Innenabstände hinzu */
     /*position: fixed; /* Macht den Footer fest, damit er immer unten bleibt */
