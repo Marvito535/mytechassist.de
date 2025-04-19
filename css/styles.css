@@ -78,10 +78,10 @@ header h1 {
 }
 
 /* Hover-Effekt für Bilder */
-img:hover {
-    /* Startet die Schüttel-Animation, wenn das Bild angefahren wird */
-    animation: shake 0.5s; /* Setzt die Animation auf eine Dauer von 0.5 Sekunden */
-    animation-iteration-count: infinite; /* Wiederholt die Animation unendlich oft */
+/* Hover-Effekt für alle Bilder, außer das mit der Klasse "profilbild" */
+img:not(.profilbild):hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
 }
 
 /* Definiert die Schüttel-Animation */
@@ -170,6 +170,32 @@ nav a:hover {
     box-shadow: 0 10px 15px #87AFC7; /* Fügt einen Schatteneffekt hinzu */
     font-family: 'Courier New', Courier, monospace; /* Setzt die Schriftart auf 'Courier New' für Retro-Optik */
 }
+
+.page-ueber-mich .retro-monitor {
+margin-left: 200px;
+margin-right: 200px;
+
+}
+
+.page-ueber-mich .retro-monitor h3 {
+    text-align: center;
+}
+
+.profilbild {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    object-fit: cover; /* schneidet das Bild bei Bedarf zu */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px; /* optional: leicht abgerundete Ecken */
+  }
+  
+  
+  .profil-container {
+    text-align: center;
+  }  
 
 /* Headline */
 
