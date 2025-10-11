@@ -20,6 +20,19 @@
         <img src="images/adler.png" alt="Logo" class="logo">
     </header>
 
+    <!-- Chatfenster -->
+<div id="chatWindow" class="chat-window">
+    <div class="chat-header">
+        <span>Live Support</span>
+        <button id="closeChat">X</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+        <p>Hallo! Wie kann ich helfen?</p>
+    </div>
+    <input type="text" id="chatInput" placeholder="Nachricht schreiben...">
+    <button id="sendBtn">Senden</button>
+</div>
+
     <nav>
         <a href="index.html">Startseite</a>
         <a href="dienstleistungen.html">Dienstleistungen</a>
@@ -98,4 +111,46 @@
         <p>&copy; 2025 MyTechAssist | Alle Rechte vorbehalten</p>
     </footer>
 </body>
+
+
+<script>
+const chatWindow = document.getElementById('chatWindow');
+const chatInput = document.getElementById('chatInput');
+const chatMessages = document.getElementById('chatMessages');
+const sendBtn = document.getElementById('sendBtn');
+const closeBtn = document.getElementById('closeChat');
+
+const logo = document.querySelector('.logo');
+
+// Öffnen beim Klick auf den Adler
+logo.addEventListener('click', () => {
+    chatWindow.style.display = 'flex';
+});
+
+// Schließen
+closeBtn.addEventListener('click', () => {
+    chatWindow.style.display = 'none';
+});
+
+// Nachricht senden
+sendBtn.addEventListener('click', () => {
+    const text = chatInput.value.trim();
+    if (text !== '') {
+        const p = document.createElement('p');
+        p.textContent = 'Du: ' + text;
+        chatMessages.appendChild(p);
+        chatInput.value = '';
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        // Beispiel-Antwort vom Support (kann später per Server oder KI kommen)
+        setTimeout(() => {
+            const response = document.createElement('p');
+            response.textContent = 'Support: Danke für deine Nachricht!';
+            chatMessages.appendChild(response);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 1000);
+    }
+});
+</script>
+
 </html>
