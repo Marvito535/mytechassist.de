@@ -165,7 +165,7 @@ nav a:hover {
     min-height: 140px;
     height: auto; /* Passt sich automatisch an den Inhalt an */
     background-color:  #585858; /* Setzt den Hintergrund der Retro-Monitore auf weiß */
-    border: 8px solid #A52A2A; /* Fügt einen gelben Rand hinzu */
+    border: 8px solid #A52A2A; /* Fügt einen roten Rand hinzu */
     border-radius: 15px; /* Abgerundete Ecken für die Retro-Monitore */
     box-shadow: 0 10px 15px #87AFC7; /* Fügt einen Schatteneffekt hinzu */
     font-family: 'Courier New', Courier, monospace; /* Setzt die Schriftart auf 'Courier New' für Retro-Optik */
@@ -235,20 +235,6 @@ th, td {
 }
 th {
     background-color:  #585858; /* Kopfzeilen etwas dunkler */
-}
-
-.content {
-    max-width: 1000px;
-    margin: 20px auto;
-    color: #EAEAEA;
-    background-color: #A52A2A;
-    display: block;
-    text-align: justify; /* Text wird blockweise verteilt */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 10px 8px #87AFC7;
-    font-family: 'Courier New', Courier, monospace; /* Setzt die Schriftart auf 'Courier New' für Retro-Optik */
-    opacity: 0.8; /* Setzt die Transparenz auf 50% */
 }
 
 /* Footer */
@@ -352,4 +338,61 @@ footer {
     color: #A9A9A9;
     border: none;
     cursor: pointer;
+}
+
+.blog-main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    color: #EAEAEA;
+}
+
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+.blog-post {
+    border: 8px solid #A52A2A; /* Fügt einen roten Rand hinzu */
+    padding: 1rem;
+    border-radius: 12px;
+    background-color:  #585858;;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 10px 15px #87AFC7;
+    color: #EAEAEA; /* Setzt die Textfarbe auf weiß */
+}
+
+.blog-post:hover {
+     background-color: #FF914D;
+}
+
+.blog-post h3 a {
+    color: #004080;
+    text-decoration: none;
+}
+
+.blog-post h3 a:hover {
+    text-decoration: underline;
+}
+
+.blog-article {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    line-height: 1.6;
+    color: #EAEAEA;
+}
+
+.date {
+    font-size: 0.9em;
+    color: gray;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #004080;
+    text-decoration: none;
 }

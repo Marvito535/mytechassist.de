@@ -37,6 +37,7 @@
         <a href="index.html">Startseite</a>
         <a href="dienstleistungen.html">Dienstleistungen</a>
         <a href="ueberuns.html">Über uns</a>
+         <a href="blog.html" class="active">Blog</a>
         <a href="#">Kontakt</a>
     </nav>
 
@@ -98,15 +99,12 @@
         </tr>
     </table>
     
-    <div class="content">
-        <h2>Frisch, flexibel und engagiert</h2>
-        <p>Auch wenn mein IT-Support-Business gerade frisch gestartet ist, bringe ich die Leidenschaft und Motivation mit, Ihre IT-Herausforderungen schnell und effektiv zu lösen. Mein Informatikstudium steht kurz vor dem Abschluss und hat mir die nötigen technischen Fähigkeiten und das tiefgehende Verständnis für IT-Probleme vermittelt. Zudem verfüge ich über langjährige Erfahrung im Kundensupport, was mir hilft, auf Ihre Bedürfnisse schnell und professionell einzugehen.</p>
+    <section id="blog-preview">
+    <h2 style="color: red; text-align: center;">Neu im Blog</h2>
+    <div id="blog-content">Lädt...</div>
+    </section>
 
-        <p>Ich verstehe, wie frustrierend es sein kann, mit IT-Problemen konfrontiert zu werden und deshalb setze ich alles daran, Ihnen so schnell wie möglich zu helfen. Jede Anfrage wird von mir individuell behandelt – bei mir ist der Kunde keine Nummer, sondern ein Partner.</p>
 
-        <p>Lassen Sie uns gemeinsam Ihre IT-Probleme angehen. Ihre Zufriedenheit und Ihr Vertrauen stehen für mich an erster Stelle und ich freue mich darauf, mit Ihnen zusammenzuarbeiten!</p>
-    </div>
-    
     <footer>
         <p>&copy; 2025 MyTechAssist | Alle Rechte vorbehalten</p>
     </footer>
@@ -151,6 +149,27 @@ sendBtn.addEventListener('click', () => {
         }, 1000);
     }
 });
+</script>
+
+<script>
+fetch('./posts/pc-beschleunigen.html')
+  .then(res => res.text())
+  .then(html => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const latestArticle = doc.querySelector('.blog-article'); // oder die passende Klasse
+    if (latestArticle) {
+      document.querySelector('#blog-content').innerHTML =
+        latestArticle.outerHTML;
+    } else {
+      document.querySelector('#blog-content').textContent =
+        'Kein Artikel gefunden.';
+    }
+  })
+  .catch(() => {
+    document.querySelector('#blog-content').textContent =
+      'Fehler beim Laden des Blogartikels.';
+  });
 </script>
 
 </html>
